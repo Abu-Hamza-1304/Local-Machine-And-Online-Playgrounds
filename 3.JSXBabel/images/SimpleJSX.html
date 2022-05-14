@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/react@18.0.0/umd/react.development.js"></script>
+
+	<script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.development.js"></script>
+
+	<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+	<div id="my-react-app">
+		
+	</div>
+
+	<script type="text/babel">
+		ReactDOM.render(
+			<h1>Welcome to the world of React!</h1>,
+			document.getElementbyId("my-react-app")
+		);
+	</script>
+
+{/* Babel is a JavaScript compiler that compiles JSX (JavaScript Syntax Extension) into regular JavaScript.
+The attribute type=text/babel tells the Babel compiler that there is some JSX code within the script tag
+which needs to be compiled. */}
+
+</body>
+</html>

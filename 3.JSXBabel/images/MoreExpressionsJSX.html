@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://unpkg.com/react@18.0.0/umd/react.development.js"></script>
+
+	<script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.development.js"></script>
+
+	<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+	<style>
+		.my-fruit {
+			color: red;
+			font-style: italic;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="my-react-app"></div>
+
+	<script type="text/babel">
+		const orange_str = "Orange";
+		const apple_str = "Apple";
+		const banana_str = "Banana";
+
+		function pick_fruit(index) {
+			if (index == 1){
+				return orange_str;
+			}
+			if (index == 2){
+				return apple_str;
+			}
+			if (index == 3){
+				return banana_str;
+			}
+			return (<b>Invalid fruit!</b>)
+		}
+		
+		const fruit_img = 'image/fruit.jpg'
+
+		const image_el = <img src={fruit.jpg}/>
+
+		const fruit_list = (
+			<div>
+				<div key="el-key" className="my-fruit">Some of my favorite fruits</div>
+				<ul>
+					<li key="O-key">{pick_fruit(1)}</li>
+					<li key="A-key">{pick_fruit(2)}</li>
+					<li key="B-key">{pick_fruit(3)}</li>
+				</ul>
+				{image_el}
+			</div>
+		);
+
+		ReactDOM.render(fruit_list, document.getElementById("my-react-app"));
+	</script>
+
+</body>
+</html>

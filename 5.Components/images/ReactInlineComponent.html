@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>React Inline Component</title>
+	<script src="https://unpkg.com/react@18.0.0/umd/react.development.js"></script>
+
+	<script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.development.js"></script>
+
+	<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+	<style>
+		.class-highlight {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="root"></div>
+
+	<script type="text/babel">
+		class MyFirstComponent extends React.Component {
+			/* There are different techniques that we can use to define components in JSX.
+			But the most commonly used technique is to define component by extending the
+			React.Component base class. -->
+			<!-- This is the ES6 syntax to define components.
+			ES6 refers to version 6, of the ECMA Script Programming Language.
+			This ES6 version introduced many enhancements to JavaScript including the use of classes.
+			ES6 included classes, which is basically just a type of function. But instead of using the
+			funct keyword to initiate a class, we use class keyword. And the properties within this
+			class are assigned within a constructor method. */
+			render() {
+				return (
+					<div>
+						<h2 className = "class-highlight">Hello world from a component!</h2>
+					</div>
+				);
+			}
+		}
+
+		ReactDOM.render(<MyFirstComponent />, document.getElementById("root"));
+	</script>
+</body>
+</html>
